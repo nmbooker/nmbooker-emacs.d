@@ -1,4 +1,7 @@
-(add-to-list 'load-path "~/.emacs.d/vendor")
+;;(add-to-list 'load-path "~/.emacs.d/vendor")
+(require 'cl-lib)
+(cl-loop for path in '("~/.emacs.d/vendor" "~/.emacs.d/nmb") do
+      (add-to-list 'load-path path))
 
 ;;; Packages
 (require 'package)
@@ -64,12 +67,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(inhibit-startup-screen nil)
  '(package-selected-packages
    (quote
-    (magit helm-ls-git helm tagedit-nxml tagedit multiple-cursors))))
+    (magit helm-ls-git helm tagedit-nxml tagedit multiple-cursors)))
+ '(perl-indent-parens-as-block t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(put 'narrow-to-region 'disabled nil)
