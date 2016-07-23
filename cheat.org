@@ -5,18 +5,39 @@ https://www.emacswiki.org/emacs/KeyboardMacros
 | F3...F4     | record                                           |
 | F4          | run keyboard macro                               |
 | C-x C-k C-r | macro is run from beginning of each region line  |
-| C-<n>       | repeat following command <n> times (e.g. C-5 F4) |
+
+For many movement commands, and for running keyboard macros, numeric argument is repeat.
+
+| C-<n> F4 | repeat kbd macro <n> times (e.g. C-5 F4) |
+| C-0 F4   | repeat kbd macro to (end of buffer?)     |
+|          | (hopefully narrowing will affect this!)  |
 
 | name-last-kbd-macro                        | name (in memory) last defined keyboard macro. Execute it with M-x |
 | insert-kbd-macro                           | insert keyboard macro definition at point                         |
 | (execute-kbd-macro (symbol-function 'foo)) | call a keyboard macro from lisp                                   |
 | local-set-key                              | Temporarily bind a key locally to a command                       |
 
+** Text Editing
+
+Observation - in at least some cases, the C-M-<x> variant is the semantic 'block' version
+
+| M-c     | title-case word                                                |
+| C-t     | transpose chars                                                |
+| M-t     | transpose words                                                |
+| C-x C-t | transpose lines                                                |
+| C-M-t   | transpose sexps (rebound to org-transpose-element in org-mode) |
+|         | In Python, put point on blank line at end of item you want to  |
+|         | move down                                                      |
+
 ** Navigation
 
 Go-to whatever   help at:   M-g C-h
 
 | C-M-n, C-M-p | go to matching paren (does this work for XML/HTML tags?) |
+| M-{,  M-}    | TODO find out what proper definitioin is                 |
+
+** Dired
+| C-x C-j | dired-jump - jump to dired buffer corresponding to current buffer |
 
 ** Lining stuff up
 | M-x indent-to-column NUMBER RET | Insert spaces to line up with column NUMBER |
@@ -25,6 +46,9 @@ Go-to whatever   help at:   M-g C-h
 ** Kills
 | C-shift-Backspace | kill whole line (anywhere on line)                                     |
 | C-M-k             | kill sexp (works in Python too - put in word that introduces the sexp) |
+
+** semantic selection
+| expand-region | expand region to include enclosing semantic region of code |
 
 ** Stuff to learn about creating
    - Transient keymaps
@@ -56,6 +80,23 @@ Go-to whatever   help at:   M-g C-h
    - [ ] git-commit-mode
    - [ ] minimap
    - [ ] popup
+
+** Notes from watching magnar's talk: https://www.youtube.com/watch?v=p3Te_a-AGqM
+
+   - [ ] align-regexp
+   - [ ] ace-jump
+   - javascript refactoring - look to this for base for Perl and Python refactoring?
+   - commands to make or jump to test file corresponding to class
+   - annoying arrows mode (to tell me if I could use a shortcut to do the same thing?)
+
+   - defadvice sgml-delete-tag 13:10
+   - undo tree 15:18
+   - macros work across buffer (so start in dired for example and do something on each file in turn)
+   - grep mode
+   - there's also ag/ack!
+   - editing stuff from grep buffer at 16:45?  anything special installed to do this?
+   - use dired with emacs
+   - [ ] how to get short listing in dired?
 
 ** Libraries I've found which might be useful later
    - let-alist - macro to easily let alist values
