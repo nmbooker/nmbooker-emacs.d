@@ -16,7 +16,7 @@
 (add-hook 'prog-mode-hook 'linum-mode)	; want line numbers on programming modes
 (require 'align)
 
-;;; expand-region
+;;; expand-region    ; seems to be behaving oddly in emacs 25
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 ;; https://github.com/magnars/expand-region.el
