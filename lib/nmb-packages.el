@@ -11,7 +11,8 @@
 			 helm
 			 helm-ls-git
 			 magit
-			 expand-region))
+			 expand-region
+			 ace-jump-mode))
 
 (defun nmb/install-packages ()
   "Install my packages"
