@@ -1,0 +1,87 @@
+* Notes
+
+** Keyboard macros, local bindings, repeats
+https://www.emacswiki.org/emacs/KeyboardMacros
+| F3...F4     | record                                           |
+| F4          | run keyboard macro                               |
+| C-x C-k C-r | macro is run from beginning of each region line  |
+| C-<n>       | repeat following command <n> times (e.g. C-5 F4) |
+
+| name-last-kbd-macro                        | name (in memory) last defined keyboard macro. Execute it with M-x |
+| insert-kbd-macro                           | insert keyboard macro definition at point                         |
+| (execute-kbd-macro (symbol-function 'foo)) | call a keyboard macro from lisp                                   |
+| local-set-key                              | Temporarily bind a key locally to a command                       |
+
+** Navigation
+
+Go-to whatever   help at:   M-g C-h
+
+| C-M-n, C-M-p | go to matching paren (does this work for XML/HTML tags?) |
+
+** Lining stuff up
+| M-x indent-to-column NUMBER RET | Insert spaces to line up with column NUMBER |
+| C-M-\                           | Indent region                               |
+
+** Kills
+| C-shift-Backspace | kill whole line (anywhere on line)                                     |
+| C-M-k             | kill sexp (works in Python too - put in word that introduces the sexp) |
+
+** Stuff to learn about creating
+   - Transient keymaps
+   - Minor modes
+
+** List of packages to check out 'lifted' from http://stackoverflow.com/questions/31079204/emacs-package-install-script-in-init-file#31080940
+   - [ ] python-environment
+   - [ ] deferred
+   - [X] epc 
+   - [ ] flycheck
+   - [X] ctable
+   - [ ] jedi
+   - [ ] concurrent
+   - [X] company
+   - [ ] cyberpunk-theme
+   - [ ] elpy
+   - [X] yasnippet
+   - [ ] pyvenv
+   - [ ] highlight-indentation
+   - [ ] find-file-in-project
+   - [X] sql-indent
+   - [X] sql
+   - [ ] exec-path-from-shell
+   - [X] iedit
+   - [ ] auto-complete
+   - [X] let-alist
+   - [X] magit
+   - [ ] git-rebase-mode
+   - [ ] git-commit-mode
+   - [ ] minimap
+   - [ ] popup
+
+** Libraries I've found which might be useful later
+   - let-alist - macro to easily let alist values
+   - epc - communicate with other programs
+   - ctable - table component for emacs lisp - https://github.com/kiwanami/emacs-ctable
+
+** Applications/modes/etc I've found which might be useful later
+   - iedit (minor mode) - Edit multiple regions in the same way simultaneously, could be alternative or complement to multiple-cursors, looks good for renaming refactors!
+   - sql
+   - sql-indent
+   - yasnippet - snippets
+   - company - autocompletion
+   - edbi - Database interface for Emacs Lisp, and viewer
+   - E2WM - window manager for emacs - https://github.com/kiwanami/emacs-window-manager/
+   - https://www.emacswiki.org/emacs/WebKit - browser
+   - ac-html - auto-complete source for html tags and attributes
+   - ac-html-bootstrap - auto-complete bootstrap3/fontawesome classes
+   - https://www.emacswiki.org/emacs/Repeatable
+   - iy-go-to-char - vim-like go to char, go up to char, etc
+   - key-chord
+   - magnars' mark-multiple
+   - ace-jump - see https://www.youtube.com/watch?v=UZkpmegySnc
+
+** Ideas of stuff to write
+   - Odoo XML and HTML5 completion sources
+
+** Possible refactoring tools
+   - emr - https://github.com/chrisbarrett/emacs-refactor - looks very good
+   - iedit - for Rename
