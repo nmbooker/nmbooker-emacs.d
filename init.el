@@ -38,21 +38,25 @@
 (global-set-key (kbd "C-<")  'mc/mark-previous-like-this)
 (global-set-key (kbd "C-x C-<") 'mc/mark-all-like-this)
 
-;;; tegedit
+;; ;;; tagedit
+;; (eval-after-load "sgml-mode"
+;;   '(progn
+;;      (require 'tagedit)
+;;      (tagedit-add-paredit-like-keybindings)
+;;      ;; (tagedit-add-experimental-features)
+;;      (add-hook 'html-mode-hook (lambda () (tagedit-mode 1)))))
 
-(eval-after-load "sgml-mode"
-  '(progn
-     (require 'tagedit)
-     (tagedit-add-paredit-like-keybindings)
-     ;; (tagedit-add-experimental-features)
-     (add-hook 'html-mode-hook (lambda () (tagedit-mode 1)))))
+;; (add-hook 'nxml-mode-hook
+;; 	  (lambda ()
+;; 	    (require 'tagedit)
+;; 	    (tagedit-mode)
+;; 	    (require 'tagedit-nxml)
+;; 	    (enable-tagedit-nxml)))
 
-(add-hook 'nxml-mode-hook
-	  (lambda ()
-	    (require 'tagedit)
-	    (tagedit-mode)
-	    (require 'tagedit-nxml)
-	    (enable-tagedit-nxml)))
+;;; org
+
+(add-hook 'org-mode-hook 'linum-mode)
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
