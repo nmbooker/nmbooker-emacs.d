@@ -7,6 +7,7 @@
 (show-paren-mode 1)
 (column-number-mode 1)
 (add-hook 'prog-mode-hook 'linum-mode)	; want line numbers on programming modes
+(require 'align)
 
 ;;; expand-region
 (require 'expand-region)
