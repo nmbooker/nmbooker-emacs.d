@@ -12,7 +12,9 @@
 			 helm-ls-git
 			 magit
 			 expand-region
-			 ace-jump-mode))
+			 ace-jump-mode
+			 emmet-mode
+			 yasnippet))
 
 (defun nmb/install-packages ()
   "Install my packages"

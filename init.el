@@ -48,6 +48,22 @@
 ;; you can select the key you prefer to
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
+;;; emmet-mode (for XML, html etc)
+(require 'emmet-mode)
+(add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+(add-hook 'html-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook  'emmet-mode)
+;; C-RET previews and offers to expand
+
+;;; yasnippet
+(require 'yasnippet)
+(yas-global-mode 1)
+;; may want to use minor modes instead:
+;; (yas-reload-all)
+;; (add-hook 'prog-mode-hook #'yas-minor-mode)
+
+;;;
+
 ;; ;;; tagedit
 ;; (eval-after-load "sgml-mode"
 ;;   '(progn
