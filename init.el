@@ -1,33 +1,24 @@
-;;(add-to-list 'load-path "~/.emacs.d/vendor")
-(require 'cl-lib)
-(cl-loop for path in '("~/.emacs.d/vendor" "~/.emacs.d/nmb") do
-      (add-to-list 'load-path path))
+(load-file "~/.emacs.d/load-path.el")
 
-;;; Packages
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "https://stable.melpa.org/packages/") t)
-(when (< emacs-major-version 24)
-  ;; For important compatibility libraries like cl-lib
-  (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
-(package-initialize)
-
-(setq nmb/packages '(multiple-cursors
-		     tagedit
-		     helm
-		     helm-ls-git
-		     magit))
-
-(defun nmb/install-packages ()
-  "Install my packages"
-  (interactive)
-  (mapcar 'package-install nmb/packages))
+(require 'nmb-packages)
+(nmb/install-packages)
 
 ;;; global modes
 (show-paren-mode 1)
+(column-number-mode 1)
+(add-hook 'prog-mode-hook 'linum-mode)	; want line numbers on programming modes
+
+;;; expand-region
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+;; https://github.com/magnars/expand-region.el
+;; Select current object.  Repeated presses expand further to enclosing object
+
+;;; Clipboard
+(setq x-select-enable-clipboard t)
+(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
 ;;; magit
-
 (require 'magit)
 (global-set-key (kbd "C-x g") 'magit-status)
 
