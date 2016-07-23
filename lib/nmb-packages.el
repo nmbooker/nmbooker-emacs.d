@@ -19,8 +19,7 @@
 (defun nmb/install-packages ()
   "Install my packages"
   (interactive)
-  (unless package-archive-contents
-    (package-refresh-contents))
+  (package-refresh-contents)
   (dolist (package nmb/package-list)
     (unless (package-installed-p package)
       (package-install package))))
