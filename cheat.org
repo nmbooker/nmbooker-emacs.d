@@ -98,6 +98,11 @@ Go-to whatever   help at:   M-g C-h
    - use dired with emacs
    - [ ] how to get short listing in dired?
 
+** From https://www.youtube.com/watch?v=sBhQ2NIcrLQ
+   - cleanup-buffer
+   - defadvice
+   - zen mode, css expansions #sidebar>ul#sidebarmenu>li
+
 ** Libraries I've found which might be useful later
    - let-alist - macro to easily let alist values
    - epc - communicate with other programs
