@@ -55,6 +55,9 @@
 ;; you can select the key you prefer to
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
+;;; ace-window
+(global-set-key (kbd "C-x o") 'ace-window)
+
 ;;; emmet-mode (for XML, html etc)
 (require 'emmet-mode)
 (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
@@ -99,7 +102,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (magit helm-ls-git helm tagedit-nxml tagedit multiple-cursors)))
+    (ace-window markdown-mode html5-schema magit helm-ls-git helm tagedit-nxml tagedit multiple-cursors)))
  '(perl-indent-parens-as-block t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

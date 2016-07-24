@@ -14,7 +14,10 @@
 			 expand-region
 			 ace-jump-mode
 			 emmet-mode
-			 yasnippet))
+			 yasnippet
+			 html5-schema
+			 markdown-mode
+			 ace-window))
 
 (defun nmb/install-packages ()
   "Install my packages"
