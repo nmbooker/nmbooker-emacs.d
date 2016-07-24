@@ -1,5 +1,4 @@
 * Notes
-
 ** Keyboard macros, local bindings, repeats
 https://www.emacswiki.org/emacs/KeyboardMacros
 | F3...F4     | record                                           |
