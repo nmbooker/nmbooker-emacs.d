@@ -107,7 +107,7 @@ Go-to whatever   help at:   M-g C-h
    - let-alist - macro to easily let alist values
    - epc - communicate with other programs
    - ctable - table component for emacs lisp - https://github.com/kiwanami/emacs-ctable
-
+   - https://github.com/jwiegley/use-package
 ** Applications/modes/etc I've found which might be useful later
    - iedit (minor mode) - Edit multiple regions in the same way simultaneously, could be alternative or complement to multiple-cursors, looks good for renaming refactors!
    - sql
