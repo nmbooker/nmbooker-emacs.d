@@ -102,7 +102,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (ace-window markdown-mode html5-schema magit helm-ls-git helm tagedit-nxml tagedit multiple-cursors)))
+    (helm-ack ack ag helm-ag ace-window markdown-mode html5-schema magit helm-ls-git helm tagedit-nxml tagedit multiple-cursors)))
  '(perl-indent-parens-as-block t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

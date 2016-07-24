@@ -17,7 +17,11 @@
 			 yasnippet
 			 html5-schema
 			 markdown-mode
-			 ace-window))
+			 ace-window
+			 ag
+			 ack
+			 helm-ack
+			 helm-ag))
 
 (defun nmb/install-packages ()
   "Install my packages"
