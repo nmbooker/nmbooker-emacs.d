@@ -5,6 +5,11 @@
 ;; You may delete these explanatory comments.
 ;; (package-initialize)
 
+;; I often have a .emacs file which is used to add private or location-specific
+;; config.
+;; You can do the same:
+;;  (load-file (concat user-emacs-directory "/init.el"))
+
 (load-file "~/.emacs.d/load-path.el")
 
 (require 'nmb-packages)
