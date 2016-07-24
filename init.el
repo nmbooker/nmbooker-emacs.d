@@ -96,9 +96,13 @@
 ;; 	    (enable-tagedit-nxml)))
 
 ;;; org
-
 (add-hook 'org-mode-hook 'linum-mode)
-
+(setq org-default-notes-file (concat org-directory "/TODO.org"))
+(setq org-agenda-files `(,org-directory))
+(global-set-key (kbd "C-c o a") 'org-agenda)
+(global-set-key (kbd "C-c o l") 'org-store-link)
+(global-set-key (kbd "C-c o c") 'org-capture)
+(global-set-key (kbd "C-c o b") 'org-iswitchb)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
