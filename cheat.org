@@ -18,22 +18,44 @@ For many movement commands, and for running keyboard macros, numeric argument is
 
 ** Text Editing
 
-Observation - in at least some cases, the C-M-<x> variant is the semantic 'block' version
-
-| M-c     | title-case word                                                |
-| C-t     | transpose chars                                                |
-| M-t     | transpose words                                                |
-| C-x C-t | transpose lines                                                |
-| C-M-t   | transpose sexps (rebound to org-transpose-element in org-mode) |
-|         | In Python, put point on blank line at end of item you want to  |
-|         | move down                                                      |
-
-** Navigation
+| M-c     | title-case word |
+| C-t     | transpose chars |
+| M-t     | transpose words |
+| C-x C-t | transpose lines |
+| M-u     | upcase-word     |
+| M-l     | downcase-word   |
+| M-d     | kill-word       |
 
 Go-to whatever   help at:   M-g C-h
 
-| C-M-n, C-M-p | go to matching paren (does this work for XML/HTML tags?) |
-| M-{,  M-}    | TODO find out what proper definitioin is                 |
+Semantic Movement and editing
+Observation - in at least some cases, the C-M-<x> variant is the semantic 'block' version
+
+| C-M-t        | transpose sexps (rebound to org-transpose-element in org-mode) |
+|              | In Python, put point on blank line at end of item you want to  |
+|              | move down                                                      |
+| C-M-u        | up to opening of this level                                    |
+| C-M-d        | down into this level                                           |
+| C-M-f,b      | forward and back through siblings                              |
+| C-M-n, C-M-p | forward and back through balanced parens                       |
+| M-{,  M-}    | TODO find out what proper definition is                        |
+| C-M-a,e      | start or end of function                                       |
+
+Region
+| C-M-SPC | mark-sexp With point on opening char, highlight to closing char |
+|         | keep pressing to highlight next etc                             |
+
+
+
+** Python
+
+| M-a     | Back block        |
+| M-e     | Forward block     |
+| C-M-h   | python-mark-defun |
+| C-M-SPC | mark-sexp         |
+
+
+
 
 ** Dired
 | C-x C-j | dired-jump - jump to dired buffer corresponding to current buffer |
