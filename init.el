@@ -15,6 +15,7 @@
 (column-number-mode 1)
 (add-hook 'prog-mode-hook 'linum-mode)	; want line numbers on programming modes
 (require 'align)
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;;; expand-region    ; seems to be behaving oddly in emacs 25
 (require 'expand-region)
