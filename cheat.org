@@ -53,6 +53,7 @@ Go-to whatever   help at:   M-g C-h
 ** Stuff to learn about creating
    - Transient keymaps
    - Minor modes
+   - tabulated-list-mode - a 'base mode' for columnar lists - might be what I've been looking for for integrating stuff!
 
 ** List of packages to check out 'lifted' from http://stackoverflow.com/questions/31079204/emacs-package-install-script-in-init-file#31080940
    - [ ] python-environment
