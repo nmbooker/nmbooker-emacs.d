@@ -105,6 +105,16 @@
 (global-set-key (kbd "C-c o c") 'org-capture)
 (global-set-key (kbd "C-c o b") 'org-iswitchb)
 
+(defvar 'nmb/org-default-file "~/org/TODO.org"
+  "my default org file")
+
+(defun nmb/org-find-default-file ()
+  "Open or focus my org file
+To change path, override variable nmb/org-default-file"
+  (interactive)
+  (find-file nmb/org-default-file))
+  
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
