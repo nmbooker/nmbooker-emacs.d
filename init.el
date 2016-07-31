@@ -96,6 +96,7 @@
 ;; 	    (enable-tagedit-nxml)))
 
 ;;; org
+(require 'org)
 (add-hook 'org-mode-hook 'linum-mode)
 (setq org-default-notes-file (concat org-directory "/TODO.org"))
 (setq org-agenda-files `(,org-directory))
