@@ -21,7 +21,9 @@
 			 ag
 			 ack
 			 helm-ack
-			 helm-ag))
+			 helm-ag
+			 paredit
+			 xml-rpc))
 
 (defun nmb/install-packages ()
   "Install my packages"
