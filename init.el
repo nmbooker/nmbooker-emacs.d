@@ -127,6 +127,11 @@ To change path, override variable nmb/org-default-file"
 (require 'py-odoo)
 
 
+;; came up with this when learning about macros
+;; might be useful some time as a 'topicaliser'
+(defmacro --with (val &rest body)
+  `(let ((it ,val)) ,@body))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
