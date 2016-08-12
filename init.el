@@ -113,6 +113,11 @@
 To change path, override variable nmb/org-default-file"
   (interactive)
   (find-file nmb/org-default-file))
+
+;;; perl
+(require 'perl-mode)
+(define-key perl-mode-map (kbd "C-,") "=> ")
+(define-key perl-mode-map (kbd "C-.") "->")
   
 
 (custom-set-variables
