@@ -1,10 +1,11 @@
 ;;; Functions to help deal with Odoo projects and code
 
+(require 'dash)
 
-(unless (macrop 'if-let)
-  (defmacro* if-let ((var value) then &rest else)
-    `(let ((,var ,value))
-       (if ,var ,then ,@else))))  ;; TODO test this on an emacs without if-let
+;; (unless (macrop 'if-let)
+;;   (defmacro* if-let ((var value) then &rest else)
+;;     `(let ((,var ,value))
+;;        (if ,var ,then ,@else))))  ;; TODO test this on an emacs without if-let
 
 (defun dired-odoo-addon-root ()
   "Dired the Odoo addon root corresponding to the current buffer"
@@ -12,8 +13,8 @@
   (-dired-odoo-addon-root 'dired))
 
 (defun -dired-odoo-addon-root (dired-fun)
-  (if-let ((root-path (get-odoo-addon-root default-directory)))
-      (apply dired-fun `(,root-path))
+  (--if-let (get-odoo-addon-root default-directory)
+      (apply dired-fun `(,it))
     (message "Error: default-directory not inside Odoo addon")))
 
 (defun dired-odoo-addon-root-other-window ()
@@ -22,8 +23,8 @@
   (-dired-odoo-addon-root 'dired-other-window))
 
 (defun -find-odoo-addon-manifest (find-file-fun)
-  (if-let ((manifest-path (get-odoo-addon-manifest-path default-directory)))
-      (apply find-file-fun `(,manifest-path))
+  (--if-let (get-odoo-addon-manifest-path default-directory)
+      (apply find-file-fun `(,it))
     (message "Error: default-directory not inside Odoo addon")))
 
 (defun find-odoo-addon-manifest ()
@@ -56,3 +57,5 @@ what should be 'full to get the full path of the found file, or 'dir for the dir
       (if (string= checking-dir "/")
 	  nil
 	(search-file-in-ancestors (expand-file-name (concat checking-dir "..")) target-filename what)))))
+
+(provide 'py-odoo)
