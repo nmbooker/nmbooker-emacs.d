@@ -33,3 +33,5 @@ introducing the get method call."
         ((looking-at "[\]\)\}]") (forward-char) (backward-sexp))
         ((looking-back "[\[\(\{]" 1) (backward-char) (forward-sexp))
         (t nil)))
+
+(provide 'nmb-py)
