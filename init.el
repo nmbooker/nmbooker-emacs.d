@@ -120,7 +120,12 @@ To change path, override variable nmb/org-default-file"
 (require 'perl-mode)
 (define-key perl-mode-map (kbd "C-,") " => ")
 (define-key perl-mode-map (kbd "C-.") "->")
-  
+
+;;; python
+
+(require 'nmb-py)
+(require 'py-odoo)
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
