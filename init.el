@@ -98,6 +98,7 @@
 ;;; org
 (require 'org)
 (add-hook 'org-mode-hook 'linum-mode)
+
 (setq org-default-notes-file (concat org-directory "/TODO.org"))
 (setq org-agenda-files `(,org-directory))
 (global-set-key (kbd "C-c o a") 'org-agenda)
@@ -105,7 +106,8 @@
 (global-set-key (kbd "C-c o c") 'org-capture)
 (global-set-key (kbd "C-c o b") 'org-iswitchb)
 
-(defvar 'nmb/org-default-file "~/org/TODO.org"
+
+(defvar nmb/org-default-file "~/org/TODO.org"
   "my default org file")
 
 (defun nmb/org-find-default-file ()
