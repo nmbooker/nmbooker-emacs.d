@@ -118,7 +118,7 @@ To change path, override variable nmb/org-default-file"
 
 ;;; perl
 (require 'perl-mode)
-(define-key perl-mode-map (kbd "C-,") "=> ")
+(define-key perl-mode-map (kbd "C-,") " => ")
 (define-key perl-mode-map (kbd "C-.") "->")
   
 
