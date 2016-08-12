@@ -23,7 +23,9 @@
 			 helm-ack
 			 helm-ag
 			 paredit
-			 xml-rpc))
+			 xml-rpc
+			 dash		; dash provides --if-let for example
+			 ))
 
 (defun nmb/install-packages ()
   "Install my packages"
