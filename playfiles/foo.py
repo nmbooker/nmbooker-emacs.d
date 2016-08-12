@@ -8,3 +8,8 @@ class Foo:
     def foo(self, msg):
         print msg
 
+
+
+x = {}
+
+x['y']
