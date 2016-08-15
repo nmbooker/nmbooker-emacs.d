@@ -22,6 +22,20 @@ introducing the get method call."
 
 ;; May be useful: http://ergoemacs.org/emacs/elisp_change_brackets.html
 
+(defun nmb/python-extract-variable (start-pos end-pos varname)
+  "Extract a variable with the selected point"
+  (interactive "r\nsVariable name: ")
+  (save-excursion
+    (kill-region start-pos end-pos)
+    (python-nav-beginning-of-statement)
+    (let ((col (current-column)))
+      (move-beginning-of-line nil)
+      (open-line 1)
+      (indent-to-column col)
+      (insert varname " = ")
+      (yank)))
+  (insert varname))
+
 ;; https://www.wwwtech.de/articles/2013/may/emacs:-jump-to-matching-paren-beginning-of-block
 (defun goto-match-paren (arg)
   "Go to the matching  if on (){}[], similar to vi style of % "
